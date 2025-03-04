@@ -1,4 +1,6 @@
+using BlazorApp1;
 using BlazorApp1.Components;
+using BlazorChat;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,8 +18,14 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// app.UseEndpoints(endpoints =>
+// {
+//     endpoints.MapBlazorHub();
+//     endpoints.MapFallbackToPage("/_Host");
+//     endpoints.MapHub<BlazorChatSampleHub>(BlazorChatSampleHub.HubUrl);
+// });
 
+app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
